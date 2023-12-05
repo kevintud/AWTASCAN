@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		106493062AE4213100EF26B4 /* LandingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106493052AE4213100EF26B4 /* LandingPageViewController.swift */; };
 		A0033E502ADE0E9B007D6574 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0033E4F2ADE0E9B007D6574 /* AppDelegate.swift */; };
 		A0033E522ADE0E9B007D6574 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0033E512ADE0E9B007D6574 /* SceneDelegate.swift */; };
 		A0033E542ADE0E9B007D6574 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0033E532ADE0E9B007D6574 /* ViewController.swift */; };
 		A0033E572ADE0E9B007D6574 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0033E552ADE0E9B007D6574 /* Main.storyboard */; };
 		A0033E592ADE0E9C007D6574 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0033E582ADE0E9C007D6574 /* Assets.xcassets */; };
 		A0033E5C2ADE0E9C007D6574 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0033E5A2ADE0E9C007D6574 /* LaunchScreen.storyboard */; };
+		A0033E642ADE9673007D6574 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0033E632ADE9673007D6574 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		106493052AE4213100EF26B4 /* LandingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageViewController.swift; sourceTree = "<group>"; };
 		A0033E4C2ADE0E9B007D6574 /* AWTAScan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AWTAScan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0033E4F2ADE0E9B007D6574 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0033E512ADE0E9B007D6574 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		A0033E582ADE0E9C007D6574 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0033E5B2ADE0E9C007D6574 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0033E5D2ADE0E9C007D6574 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0033E632ADE9673007D6574 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				A0033E4F2ADE0E9B007D6574 /* AppDelegate.swift */,
 				A0033E512ADE0E9B007D6574 /* SceneDelegate.swift */,
 				A0033E532ADE0E9B007D6574 /* ViewController.swift */,
+				A0033E632ADE9673007D6574 /* ProfileViewController.swift */,
+				106493052AE4213100EF26B4 /* LandingPageViewController.swift */,
 				A0033E552ADE0E9B007D6574 /* Main.storyboard */,
 				A0033E582ADE0E9C007D6574 /* Assets.xcassets */,
 				A0033E5A2ADE0E9C007D6574 /* LaunchScreen.storyboard */,
@@ -138,8 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				106493062AE4213100EF26B4 /* LandingPageViewController.swift in Sources */,
 				A0033E542ADE0E9B007D6574 /* ViewController.swift in Sources */,
 				A0033E502ADE0E9B007D6574 /* AppDelegate.swift in Sources */,
+				A0033E642ADE9673007D6574 /* ProfileViewController.swift in Sources */,
 				A0033E522ADE0E9B007D6574 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +303,7 @@
 				DEVELOPMENT_TEAM = 8X9W9XX6VJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AWTAScan/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need to use camera";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -320,9 +329,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8X9W9XX6VJ;
+				DEVELOPMENT_TEAM = 9C6P4H9W25;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AWTAScan/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need to use camera";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -333,7 +343,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lamp.LampQRReader.AWTAScan;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lamp.LampQRReader.AWTAScan.New01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
