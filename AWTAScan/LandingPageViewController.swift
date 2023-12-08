@@ -10,6 +10,9 @@ import UIKit
 class LandingPageViewController: UIViewController {
 
     @IBOutlet weak var scanButton: UIButton!
+    
+    @IBOutlet weak var typeIdButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +21,11 @@ class LandingPageViewController: UIViewController {
     
     @IBAction func scanBUttonClicked(_ sender: UIButton) {
         performSegue(withIdentifier: "showCamera", sender: nil)
+    }
+    
+    
+    @IBAction func typeManualBnClicked(_ sender: UIButton) {
+        performSegue(withIdentifier: "showManualTyping", sender: nil)
     }
     
     /*

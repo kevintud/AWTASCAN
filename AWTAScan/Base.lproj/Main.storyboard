@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Fi-Bs-vaC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Fi-Bs-vaC">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -385,39 +385,122 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIz-IE-RRO">
-                                <rect key="frame" x="71.666666666666686" y="396" width="250" height="60"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Aui-xb-ylQ">
+                                <rect key="frame" x="46.666666666666657" y="326" width="300" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIz-IE-RRO">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="85"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Scan QR Code">
+                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="scanBUttonClicked:" destination="nXi-3d-9MD" eventType="touchUpInside" id="gHO-Hg-sdQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5XF-x3-EbR">
+                                        <rect key="frame" x="0.0" y="115" width="300" height="85"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Type ID#">
+                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="typeManualBnClicked:" destination="nXi-3d-9MD" eventType="touchUpInside" id="AMt-dC-wbd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="Jud-Md-yZi"/>
-                                    <constraint firstAttribute="height" constant="60" id="ms6-O7-7Mf"/>
+                                    <constraint firstAttribute="height" constant="200" id="1Xm-71-mqe"/>
+                                    <constraint firstAttribute="width" constant="300" id="o10-hw-y3t"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="Scan QR Code">
-                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="scanBUttonClicked:" destination="nXi-3d-9MD" eventType="touchUpInside" id="gHO-Hg-sdQ"/>
-                                </connections>
-                            </button>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8RX-hG-y8O"/>
                         <color key="backgroundColor" red="0.46274507050000002" green="0.52549022440000004" blue="0.90196079019999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="TIz-IE-RRO" firstAttribute="centerY" secondItem="xts-lS-G1X" secondAttribute="centerY" id="PTq-tm-Gfg"/>
-                            <constraint firstItem="TIz-IE-RRO" firstAttribute="centerX" secondItem="xts-lS-G1X" secondAttribute="centerX" id="gXs-PB-B1K"/>
+                            <constraint firstItem="Aui-xb-ylQ" firstAttribute="centerY" secondItem="xts-lS-G1X" secondAttribute="centerY" id="6pS-ax-Vqb"/>
+                            <constraint firstItem="Aui-xb-ylQ" firstAttribute="centerX" secondItem="xts-lS-G1X" secondAttribute="centerX" id="9q6-Ef-vVB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="k4a-NG-kyd"/>
                     <connections>
                         <outlet property="scanButton" destination="TIz-IE-RRO" id="O2r-Vn-w7h"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="showCamera" id="E4v-jN-5dI"/>
+                        <segue destination="dKC-OA-hm2" kind="show" identifier="showManualTyping" id="ge0-Uh-ptk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wkP-uH-LL9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="395" y="-669"/>
+            <point key="canvasLocation" x="445" y="-756"/>
+        </scene>
+        <!--Manual Type View Controller-->
+        <scene sceneID="jxe-gA-Ct0">
+            <objects>
+                <viewController id="dKC-OA-hm2" customClass="ManualTypeViewController" customModule="AWTAScan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="60u-xN-GVK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AWTAlogo" translatesAutoresizingMaskIntoConstraints="NO" id="ipI-hl-5qH">
+                                <rect key="frame" x="0.0" y="103" width="393" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="250" id="Xq4-0d-NSj"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type LAMPID#" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="84H-xA-Akf">
+                                <rect key="frame" x="50" y="413" width="293" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="U7f-Le-iPR"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJh-oj-8sj">
+                                <rect key="frame" x="60" y="738" width="273" height="30"/>
+                                <color key="backgroundColor" red="0.32346713539999999" green="0.72177219390000003" blue="0.71696758270000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="yEQ-jc-2N7"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Submit ID #">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="submitIdBtnClicked:" destination="dKC-OA-hm2" eventType="touchUpInside" id="2yd-mK-rAH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="caK-SS-ngj"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="caK-SS-ngj" firstAttribute="bottom" secondItem="TJh-oj-8sj" secondAttribute="bottom" constant="50" id="1SA-L7-haw"/>
+                            <constraint firstItem="TJh-oj-8sj" firstAttribute="leading" secondItem="caK-SS-ngj" secondAttribute="leading" constant="60" id="58e-vd-EAh"/>
+                            <constraint firstItem="ipI-hl-5qH" firstAttribute="top" secondItem="caK-SS-ngj" secondAttribute="top" id="Fko-28-4Pv"/>
+                            <constraint firstItem="caK-SS-ngj" firstAttribute="trailing" secondItem="84H-xA-Akf" secondAttribute="trailing" constant="50" id="V3Z-MY-IEU"/>
+                            <constraint firstItem="ipI-hl-5qH" firstAttribute="leading" secondItem="caK-SS-ngj" secondAttribute="leading" id="eRN-dx-1TE"/>
+                            <constraint firstItem="caK-SS-ngj" firstAttribute="trailing" secondItem="TJh-oj-8sj" secondAttribute="trailing" constant="60" id="hce-P9-2PJ"/>
+                            <constraint firstItem="84H-xA-Akf" firstAttribute="leading" secondItem="caK-SS-ngj" secondAttribute="leading" constant="50" id="mNc-T3-2UX"/>
+                            <constraint firstItem="84H-xA-Akf" firstAttribute="top" secondItem="ipI-hl-5qH" secondAttribute="bottom" constant="60" id="pef-Mz-Qb0"/>
+                            <constraint firstItem="ipI-hl-5qH" firstAttribute="trailing" secondItem="caK-SS-ngj" secondAttribute="trailing" id="t8i-of-OV9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="BT6-zs-WJo"/>
+                    <connections>
+                        <outlet property="lampIdTextFeild" destination="84H-xA-Akf" id="v7e-3X-6OD"/>
+                        <outlet property="submitIdBtn" destination="TJh-oj-8sj" id="qu4-Rp-Gse"/>
+                        <segue destination="i5B-Y8-n5A" kind="show" identifier="showProfileViewManual" id="y2K-ou-tbZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IrY-KP-eEI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1655.7251908396945" y="-695.07042253521126"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="y2K-ou-tbZ"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="AWTAlogo" width="1080" height="1080"/>
         <systemColor name="systemBackgroundColor">
