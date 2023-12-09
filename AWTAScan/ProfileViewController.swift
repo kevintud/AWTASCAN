@@ -50,7 +50,7 @@ class ProfileViewController: UIViewController {
         //TextField Adjusting Keyboard
         self.altarWorkerTextField.delegate = self
         altarWorkerTextField.layer.borderWidth = 1
-        altarWorkerTextField.layer.borderColor = UIColor.darkGray.cgColor
+        altarWorkerTextField.layer.borderColor = UIColor.lightGray.cgColor
         altarWorkerTextField.layer.cornerRadius = 5
         altarWorkerTextField.placeholder = "Specify the name of the altar worker or witnesses"
         
@@ -86,11 +86,11 @@ class ProfileViewController: UIViewController {
         pickerLabel.addGestureRecognizer(tapGesturePicker)
         
         pickerView.layer.borderWidth = 1
-        pickerView.layer.borderColor = UIColor.systemGray.cgColor
+        pickerView.layer.borderColor = UIColor.lightGray.cgColor
         pickerView.layer.cornerRadius = 5
-        
+        dateView.layer.cornerRadius = 5
         submitBtn.setTitleColor(UIColor.white, for: .normal)
-        submitBtn.layer.borderWidth = 1
+//        submitBtn.layer.borderWidth = 1
         submitBtn.layer.cornerRadius = 5
         submitBtn.layer.borderColor = UIColor.darkGray.cgColor
         

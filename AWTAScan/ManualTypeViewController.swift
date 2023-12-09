@@ -20,10 +20,10 @@ class ManualTypeViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
         lampIdTextFeild.delegate = self
         lampIdTextFeild.layer.borderWidth = 1.0
-        lampIdTextFeild.layer.borderColor = UIColor.black.cgColor
+        lampIdTextFeild.layer.borderColor = UIColor.lightGray.cgColor
         lampIdTextFeild.layer.cornerRadius = lampIdTextFeild.frame.width * 0.03
         
-        submitIdBtn.layer.borderWidth = 1.0
+//        submitIdBtn.layer.borderWidth = 1.0
         submitIdBtn.layer.borderColor = UIColor.black.cgColor
         submitIdBtn.layer.cornerRadius = submitIdBtn.frame.width * 0.03
         
