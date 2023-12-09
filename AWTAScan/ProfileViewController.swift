@@ -72,6 +72,7 @@ class ProfileViewController: UIViewController {
         pickerView1.delegate = self
         pickerView1.dataSource = self
         pickerView1.isHidden = true
+        pickerView1.backgroundColor = .white
         self.view.addSubview(pickerView1)
         
         // Set up constraints for the picker (replace these with your desired constraints)
@@ -148,9 +149,9 @@ class ProfileViewController: UIViewController {
                                 print(responseJSON)
                                 DispatchQueue.main.async {
                                     if let errorMessage = responseJSON["error"] as? String {
-                                        self.showAlert(title: "Error", message: errorMessage)
+                                        self.showAlert(title: "Duplicate Entry", message: "Delegate has already\n received the Holy Ghost." )
                                     } else {
-                                        self.showAlert(title: "Success", message: "Record Updated")
+                                        self.showAlert(title: "Success", message: "Record has been updated.")
                                     }
                                 }
                             }
