@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "AWTA 2024 App 1x (414 x 896 px).png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "AWTA 2024 App 2x (414 x 896 px).png.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "AWTA 2024 App 3x (414 x 896 px).png.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

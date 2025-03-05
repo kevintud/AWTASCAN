@@ -7,8 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A36C8BF2D5D984B004EDF1D /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A36C8BE2D5D9845004EDF1D /* ColorExt.swift */; };
+		0AF8DAF12D5067F2005CB68A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8DAF02D5067F2005CB68A /* LogInViewController.swift */; };
+		0AF8DAF32D506A26005CB68A /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8DAF22D506A25005CB68A /* CustomLabel.swift */; };
 		0AFBFC6F2B22DF6C0030A075 /* ManualTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFBFC6E2B22DF6C0030A075 /* ManualTypeViewController.swift */; };
 		0AFBFC712B22E1620030A075 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFBFC702B22E1620030A075 /* DataService.swift */; };
+		0AFCCA132D23D9D800B27340 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCCA0F2D23D9D800B27340 /* CustomButton.swift */; };
+		0AFCCA142D23D9D800B27340 /* CustomStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCCA102D23D9D800B27340 /* CustomStackView.swift */; };
+		0AFCCA152D23D9D800B27340 /* PaddedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCCA112D23D9D800B27340 /* PaddedLabel.swift */; };
+		0AFCCA162D23D9D800B27340 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCCA0E2D23D9D800B27340 /* CustomTextField.swift */; };
+		0AFCCA1B2D23DA5800B27340 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCCA1A2D23DA5800B27340 /* HomeViewController.swift */; };
 		106493062AE4213100EF26B4 /* LandingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106493052AE4213100EF26B4 /* LandingPageViewController.swift */; };
 		A0033E502ADE0E9B007D6574 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0033E4F2ADE0E9B007D6574 /* AppDelegate.swift */; };
 		A0033E522ADE0E9B007D6574 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0033E512ADE0E9B007D6574 /* SceneDelegate.swift */; };
@@ -20,8 +28,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A36C8BE2D5D9845004EDF1D /* ColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExt.swift; sourceTree = "<group>"; };
+		0AF8DAF02D5067F2005CB68A /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		0AF8DAF22D506A25005CB68A /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		0AFBFC6E2B22DF6C0030A075 /* ManualTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualTypeViewController.swift; sourceTree = "<group>"; };
 		0AFBFC702B22E1620030A075 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		0AFCCA0E2D23D9D800B27340 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		0AFCCA0F2D23D9D800B27340 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		0AFCCA102D23D9D800B27340 /* CustomStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStackView.swift; sourceTree = "<group>"; };
+		0AFCCA112D23D9D800B27340 /* PaddedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddedLabel.swift; sourceTree = "<group>"; };
+		0AFCCA1A2D23DA5800B27340 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		106493052AE4213100EF26B4 /* LandingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageViewController.swift; sourceTree = "<group>"; };
 		A0033E4C2ADE0E9B007D6574 /* AWTAScan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AWTAScan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0033E4F2ADE0E9B007D6574 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +61,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A36C8BC2D5D9824004EDF1D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0A36C8BE2D5D9845004EDF1D /* ColorExt.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		0A36C8C02D5D98B2004EDF1D /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				0AF8DAF02D5067F2005CB68A /* LogInViewController.swift */,
+			);
+			path = LogIn;
+			sourceTree = "<group>";
+		};
+		0A6737872D787E830013DD5E /* OLD CODE */ = {
+			isa = PBXGroup;
+			children = (
+				106493052AE4213100EF26B4 /* LandingPageViewController.swift */,
+			);
+			path = "OLD CODE";
+			sourceTree = "<group>";
+		};
+		0AFCCA122D23D9D800B27340 /* CustomComponents */ = {
+			isa = PBXGroup;
+			children = (
+				0AF8DAF22D506A25005CB68A /* CustomLabel.swift */,
+				0AFCCA0E2D23D9D800B27340 /* CustomTextField.swift */,
+				0AFCCA0F2D23D9D800B27340 /* CustomButton.swift */,
+				0AFCCA102D23D9D800B27340 /* CustomStackView.swift */,
+				0AFCCA112D23D9D800B27340 /* PaddedLabel.swift */,
+			);
+			path = CustomComponents;
+			sourceTree = "<group>";
+		};
+		0AFCCA182D23DA1F00B27340 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				0A36C8C02D5D98B2004EDF1D /* LogIn */,
+				0AFCCA192D23DA3800B27340 /* Home */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		0AFCCA192D23DA3800B27340 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0AFCCA1A2D23DA5800B27340 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		A0033E432ADE0E9B007D6574 = {
 			isa = PBXGroup;
 			children = (
@@ -64,12 +133,15 @@
 		A0033E4E2ADE0E9B007D6574 /* AWTAScan */ = {
 			isa = PBXGroup;
 			children = (
+				0AFCCA122D23D9D800B27340 /* CustomComponents */,
+				0A36C8BC2D5D9824004EDF1D /* Utils */,
+				0AFCCA182D23DA1F00B27340 /* Screen */,
 				A0033E4F2ADE0E9B007D6574 /* AppDelegate.swift */,
 				A0033E512ADE0E9B007D6574 /* SceneDelegate.swift */,
 				A0033E532ADE0E9B007D6574 /* ViewController.swift */,
 				0AFBFC6E2B22DF6C0030A075 /* ManualTypeViewController.swift */,
 				A0033E632ADE9673007D6574 /* ProfileViewController.swift */,
-				106493052AE4213100EF26B4 /* LandingPageViewController.swift */,
+				0A6737872D787E830013DD5E /* OLD CODE */,
 				0AFBFC702B22E1620030A075 /* DataService.swift */,
 				A0033E552ADE0E9B007D6574 /* Main.storyboard */,
 				A0033E582ADE0E9C007D6574 /* Assets.xcassets */,
@@ -151,12 +223,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AFBFC6F2B22DF6C0030A075 /* ManualTypeViewController.swift in Sources */,
+				0A36C8BF2D5D984B004EDF1D /* ColorExt.swift in Sources */,
 				0AFBFC712B22E1620030A075 /* DataService.swift in Sources */,
+				0AF8DAF32D506A26005CB68A /* CustomLabel.swift in Sources */,
+				0AFCCA132D23D9D800B27340 /* CustomButton.swift in Sources */,
+				0AFCCA142D23D9D800B27340 /* CustomStackView.swift in Sources */,
+				0AFCCA152D23D9D800B27340 /* PaddedLabel.swift in Sources */,
+				0AFCCA162D23D9D800B27340 /* CustomTextField.swift in Sources */,
+				0AF8DAF12D5067F2005CB68A /* LogInViewController.swift in Sources */,
 				106493062AE4213100EF26B4 /* LandingPageViewController.swift in Sources */,
 				A0033E542ADE0E9B007D6574 /* ViewController.swift in Sources */,
 				A0033E502ADE0E9B007D6574 /* AppDelegate.swift in Sources */,
 				A0033E642ADE9673007D6574 /* ProfileViewController.swift in Sources */,
 				A0033E522ADE0E9B007D6574 /* SceneDelegate.swift in Sources */,
+				0AFCCA1B2D23DA5800B27340 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,7 +314,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -291,7 +371,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -306,24 +386,29 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8X9W9XX6VJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AWTAScan/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "Need to use camera";
+				INFOPLIST_KEY_CFBundleDisplayName = AWTAScanApp;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Permission is required to access the user’s camera for QR code scanning.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lamp.LampQRReader.AWTAScan;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevin.lampawtascanapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -335,24 +420,29 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9C6P4H9W25;
+				DEVELOPMENT_TEAM = 8X9W9XX6VJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AWTAScan/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "Need to use camera";
+				INFOPLIST_KEY_CFBundleDisplayName = AWTAScanApp;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Permission is required to access the user’s camera for QR code scanning.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lamp.LampQRReader.AWTAScan.New01;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevin.lampawtascanapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

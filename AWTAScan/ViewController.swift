@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import Network
 
 class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     var captureSession: AVCaptureSession!
@@ -15,6 +16,7 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .white
         
         // Create a background queue for AVCaptur/Users/kevin/Desktop/Projects/Apps/AWTAScan/AWTAScan/ProfileViewController.swifteSession
         let sessionQueue = DispatchQueue(label: "com.yourapp.AVCaptureSessionQueue")
@@ -62,10 +64,47 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     }
 
     func setupPreviewLayer() {
+        //        self.previewLayer = AVCaptureVideoPreviewLayer(session: self.captureSession)
+        //        self.previewLayer.videoGravity = .resizeAspectFill
+        //        self.previewLayer.frame = self.view.layer.bounds
+        //        self.view.layer.addSublayer(self.previewLayer)
+        
+        // Get the screen bounds
+        let screenBounds = self.view.layer.bounds
+        
+        // Calculate the size to be 1/3 of the screen height
+        let previewHeight = screenBounds.height / 3
+        let previewWidth = screenBounds.width
+        
+        // Calculate the position to center the preview
+        let xPos = (screenBounds.width - previewWidth) / 2
+        let yPos = (screenBounds.height - previewHeight) / 2
+        
+        // Setup the preview layer
         self.previewLayer = AVCaptureVideoPreviewLayer(session: self.captureSession)
         self.previewLayer.videoGravity = .resizeAspectFill
-        self.previewLayer.frame = self.view.layer.bounds
+        self.previewLayer.frame = CGRect(x: xPos, y: yPos, width: previewWidth, height: previewHeight)
+        
+        // Add the preview layer to the view
         self.view.layer.addSublayer(self.previewLayer)
+        
+        // Add label above the preview layer
+        addScanLabel(yPos: yPos)
+    }
+    
+    func addScanLabel(yPos: CGFloat) {
+        // Create the label
+        let scanLabel = UILabel()
+        scanLabel.text = "SCAN the LAMP ID QR Code"
+        scanLabel.textAlignment = .center
+        scanLabel.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        scanLabel.textColor = UIColor.gray
+        
+        // Set label frame (above the preview layer)
+        scanLabel.frame = CGRect(x: 0, y: yPos - 40, width: self.view.frame.width, height: 40) // Position label just above the preview
+        
+        // Add label to the view
+        self.view.addSubview(scanLabel)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -95,8 +134,28 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     }
     
     func fetchData(delegateID: String) {
-        // Construct the URL with the delegateID
-        let baseURL = "https://online.lampawta.com/api/delegate/"
+        let monitor = NWPathMonitor()
+        let queue = DispatchQueue.global(qos: .background)
+        monitor.start(queue: queue)
+        
+        monitor.pathUpdateHandler = { path in
+            if path.status == .satisfied {
+                // Network is available, proceed with API call
+                DispatchQueue.main.async {
+                    self.makeApiCall(delegateID: delegateID)
+                }
+            } else {
+                // No internet connection, show an alert
+                DispatchQueue.main.async {
+                    self.showNoInternetAlert()
+                }
+            }
+            monitor.cancel()
+        }
+    }
+
+    func makeApiCall(delegateID: String) {
+        let baseURL = "https://lampawta.com/api/delegate/"
         let apiKey = "bdf0bf18-54cf-4aca-86ec-a03b77c02264"
         
         guard let url = URL(string: "\(baseURL)\(delegateID)?api_key=\(apiKey)") else {
@@ -127,6 +186,24 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
             }
         }.resume()
     }
+
+    func showNoInternetAlert() {
+        let alertController = UIAlertController(title: "No Internet", message: "Please check your internet connection and try again.", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+                self.restartCameraSession()
+            }))
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    func restartCameraSession() {
+        // Check if the capture session is not running, and restart it
+        if captureSession?.isRunning == false {
+            DispatchQueue.global(qos: .background).async {
+                self.captureSession.startRunning()
+            }
+        }
+    }
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showProfileView" {
