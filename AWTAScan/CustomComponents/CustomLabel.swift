@@ -20,7 +20,7 @@ class CustomLabel: UILabel {
         self.init(frame: .zero)
         self.text = text
         self.textAlignment = .center
-        self.font = UIFont(name: "CenturyGothic", size: fontSize) ?? UIFont.systemFont(ofSize: fontSize)
+        self.font = UIFont(name: "Avenir", size: fontSize) ?? UIFont.systemFont(ofSize: fontSize)
         self.translatesAutoresizingMaskIntoConstraints = false
     }
     
