@@ -66,13 +66,24 @@ class QRScannerView: UIView, AVCaptureMetadataOutputObjectsDelegate {
             return
         }
         
+        // Set up camera preview layer with a margin
+        let margin: CGFloat = 20  // Adjust the margin size
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession!)
         previewLayer.videoGravity = .resizeAspectFill
-        previewLayer.frame = self.bounds
+        
+        let previewFrame = CGRect(
+            x: margin,
+            y: margin,
+            width: bounds.width - (margin * 2),
+            height: bounds.height - (margin * 2)
+        )
+        
+        previewLayer.frame = previewFrame
         layer.addSublayer(previewLayer)
         
         captureSession!.startRunning()
     }
+
     
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         captureSession?.stopRunning()
@@ -101,47 +112,44 @@ class QRScannerView: UIView, AVCaptureMetadataOutputObjectsDelegate {
     
     // MARK: - Corner Brackets
     private func setupCornerBrackets() {
-        let cornerSize: CGFloat = 20
-        let lineWidth: CGFloat = 4
-        let cornerColor = UIColor.purple.cgColor
-        let blackCornerColor = UIColor.black.cgColor
-        
+        let cornerSize: CGFloat = 30
+        let lineWidth: CGFloat = 6
+        let inset: CGFloat = 8 // Distance from preview frame
+        let cornerColor = UIColor.black.cgColor
+
+        let previewFrame = previewLayer.frame // Get the preview layer's frame
+
         let path = UIBezierPath()
-        
-        // Top-left corner
-        path.move(to: CGPoint(x: 0, y: cornerSize))
-        path.addLine(to: CGPoint(x: 0, y: 0))
-        path.addLine(to: CGPoint(x: cornerSize, y: 0))
-        
-        // Top-right corner
-        path.move(to: CGPoint(x: bounds.width - cornerSize, y: 0))
-        path.addLine(to: CGPoint(x: bounds.width, y: 0))
-        path.addLine(to: CGPoint(x: bounds.width, y: cornerSize))
-        
-        // Bottom-left corner
-        path.move(to: CGPoint(x: 0, y: bounds.height - cornerSize))
-        path.addLine(to: CGPoint(x: 0, y: bounds.height))
-        path.addLine(to: CGPoint(x: cornerSize, y: bounds.height))
-        
-        // Bottom-right corner
-        path.move(to: CGPoint(x: bounds.width - cornerSize, y: bounds.height))
-        path.addLine(to: CGPoint(x: bounds.width, y: bounds.height))
-        path.addLine(to: CGPoint(x: bounds.width, y: bounds.height - cornerSize))
-        
+
+        // Top-left corner (outside)
+        path.move(to: CGPoint(x: previewFrame.minX - inset, y: previewFrame.minY - inset + cornerSize))
+        path.addLine(to: CGPoint(x: previewFrame.minX - inset, y: previewFrame.minY - inset))
+        path.addLine(to: CGPoint(x: previewFrame.minX - inset + cornerSize, y: previewFrame.minY - inset))
+
+        // Top-right corner (outside)
+        path.move(to: CGPoint(x: previewFrame.maxX + inset - cornerSize, y: previewFrame.minY - inset))
+        path.addLine(to: CGPoint(x: previewFrame.maxX + inset, y: previewFrame.minY - inset))
+        path.addLine(to: CGPoint(x: previewFrame.maxX + inset, y: previewFrame.minY - inset + cornerSize))
+
+        // Bottom-left corner (outside)
+        path.move(to: CGPoint(x: previewFrame.minX - inset, y: previewFrame.maxY + inset - cornerSize))
+        path.addLine(to: CGPoint(x: previewFrame.minX - inset, y: previewFrame.maxY + inset))
+        path.addLine(to: CGPoint(x: previewFrame.minX - inset + cornerSize, y: previewFrame.maxY + inset))
+
+        // Bottom-right corner (outside)
+        path.move(to: CGPoint(x: previewFrame.maxX + inset - cornerSize, y: previewFrame.maxY + inset))
+        path.addLine(to: CGPoint(x: previewFrame.maxX + inset, y: previewFrame.maxY + inset))
+        path.addLine(to: CGPoint(x: previewFrame.maxX + inset, y: previewFrame.maxY + inset - cornerSize))
+
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = path.cgPath
         shapeLayer.strokeColor = cornerColor
         shapeLayer.fillColor = UIColor.clear.cgColor
         shapeLayer.lineWidth = lineWidth
         layer.addSublayer(shapeLayer)
-        
-        let blackShapeLayer = CAShapeLayer()
-        blackShapeLayer.path = path.cgPath
-        blackShapeLayer.strokeColor = blackCornerColor
-        blackShapeLayer.fillColor = UIColor.clear.cgColor
-        blackShapeLayer.lineWidth = lineWidth - 1
-        layer.addSublayer(blackShapeLayer)
     }
+
+
     
     override func layoutSubviews() {
         super.layoutSubviews()

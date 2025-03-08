@@ -29,7 +29,8 @@
         
         
         private lazy var greetingLabel: CustomLabel = {
-            let label = CustomLabel(text: "Hi Jamie Birot!", fontSize: 16)
+            let label = CustomLabel(text: "Hi Jamie Birot!", fontSize: DynamicMultiplier.fontSize(16))
+            label.textColor = .darkGray
             return label
         }()
         
@@ -38,30 +39,30 @@
             let image = UIImage(systemName: "rectangle.portrait.and.arrow.right")
             button.setImage(image, for: .normal)
             button.setTitle("Log out", for: .normal)
-            button.tintColor = .black
-            button.setTitleColor(.black, for: .normal)
-            button.titleLabel?.font = .systemFont(ofSize: 16)
+            button.tintColor = .darkGray
+            button.setTitleColor(.darkGray, for: .normal)
+            button.titleLabel?.font = .systemFont(ofSize: DynamicMultiplier.fontSize(16))
             button.translatesAutoresizingMaskIntoConstraints = false
             button.addTarget(self, action: #selector(logoutButtonTapped), for: .touchUpInside)
             return button
         }()
         
         private let titleLabel: CustomLabel = {
-            let label = CustomLabel(text: "SCAN APP", fontSize: 32)
-            label.font  = .boldSystemFont(ofSize: 32)
+            let label = CustomLabel(text: "SCAN APP", fontSize: DynamicMultiplier.fontSize(32))
+//            label.font  = .boldSystemFont(ofSize: 32)
+            label.textColor = .black
             return label
         }()
         
         private let scanView: QRScannerView = {
             let view = QRScannerView()
-//            view.layer.borderWidth = 4
-//            view.layer.borderColor = UIColor.black.cgColor
             view.translatesAutoresizingMaskIntoConstraints = false
             return view
         }()
         
         private let scanLabel: CustomLabel = {
-            let label = CustomLabel(text: "SCAN QR CODE", fontSize: 16)
+            let label = CustomLabel(text: "SCAN QR CODE", fontSize: DynamicMultiplier.fontSize(16))
+            label.textColor = .black
             return label
         }()
         
@@ -82,12 +83,12 @@
             let button = UIButton(type: .system)
             
             // Set icon
-            let image = UIImage(systemName: "arrow.up")?.withRenderingMode(.alwaysTemplate) // Allows tint color
+            let image = UIImage(systemName: "arrow.up")?.withRenderingMode(.alwaysTemplate)
             button.setImage(image, for: .normal)
             
             // Set text below icon
             button.setTitle("UPLOAD", for: .normal)
-            button.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .medium)
+            button.titleLabel?.font = UIFont.systemFont(ofSize: DynamicMultiplier.fontSize(14), weight: .medium)
             button.titleLabel?.textAlignment = .center
             
             // Styling
@@ -118,9 +119,9 @@
             
             NSLayoutConstraint.activate([
                 
-                greetingLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0.05 * view.frame.width),
+                greetingLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: DynamicMultiplier.width(15)),
                 greetingLabel.centerYAnchor.constraint(equalTo: logoutButton.centerYAnchor),
-                greetingLabel.heightAnchor.constraint(equalToConstant: 0.03 * view.frame.height), // Set height dynamically
+                greetingLabel.heightAnchor.constraint(equalToConstant: DynamicMultiplier.height(20)),
                 
                 logoutButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -0.05 * view.frame.width),
                 logoutButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0.02 * view.frame.height),

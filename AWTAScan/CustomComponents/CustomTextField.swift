@@ -31,14 +31,14 @@ class CustomTextField: UITextField {
         layer.borderWidth = 1
         layer.borderColor = UIColor.lightGray.cgColor
         
-        textColor = .label
+        textColor = .black
         tintColor = .label
-        textAlignment = .left
+        textAlignment = .center
         font = UIFont.preferredFont(forTextStyle: .title2)
         adjustsFontSizeToFitWidth = true
         minimumFontSize = 12
         
-        backgroundColor = .tertiarySystemBackground
+        backgroundColor = .white
         autocorrectionType = .no
         returnKeyType = .go
         clearButtonMode = .whileEditing
@@ -47,6 +47,15 @@ class CustomTextField: UITextField {
         self.leftView = paddingView
         self.leftViewMode = .always
         
+        attributedPlaceholder = NSAttributedString(
+            string: placeholder ?? "",
+            attributes: [
+                .foregroundColor: UIColor.lightGray,
+                .font: UIFont.systemFont(ofSize: DynamicMultiplier.fontSize(14))
+            
+            ]
+            
+        )
     }
     
 }

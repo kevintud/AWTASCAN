@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0A36C8BF2D5D984B004EDF1D /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A36C8BE2D5D9845004EDF1D /* ColorExt.swift */; };
 		0A67378D2D78889E0013DD5E /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67378C2D78889E0013DD5E /* QRScannerView.swift */; };
+		0AD63ADF2D7BDF1900CBEA69 /* DynamicMultiplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD63ADE2D7BDF0800CBEA69 /* DynamicMultiplier.swift */; };
+		0AD63AE32D7BE4BE00CBEA69 /* KeyboardHandlingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD63AE22D7BE4BE00CBEA69 /* KeyboardHandlingViewController.swift */; };
 		0AF8DAF12D5067F2005CB68A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8DAF02D5067F2005CB68A /* LogInViewController.swift */; };
 		0AF8DAF32D506A26005CB68A /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8DAF22D506A25005CB68A /* CustomLabel.swift */; };
 		0AFBFC6F2B22DF6C0030A075 /* ManualTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFBFC6E2B22DF6C0030A075 /* ManualTypeViewController.swift */; };
@@ -31,6 +33,8 @@
 /* Begin PBXFileReference section */
 		0A36C8BE2D5D9845004EDF1D /* ColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExt.swift; sourceTree = "<group>"; };
 		0A67378C2D78889E0013DD5E /* QRScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
+		0AD63ADE2D7BDF0800CBEA69 /* DynamicMultiplier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicMultiplier.swift; sourceTree = "<group>"; };
+		0AD63AE22D7BE4BE00CBEA69 /* KeyboardHandlingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHandlingViewController.swift; sourceTree = "<group>"; };
 		0AF8DAF02D5067F2005CB68A /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		0AF8DAF22D506A25005CB68A /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		0AFBFC6E2B22DF6C0030A075 /* ManualTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualTypeViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 		0A36C8BC2D5D9824004EDF1D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0AD63ADE2D7BDF0800CBEA69 /* DynamicMultiplier.swift */,
+				0AD63AE22D7BE4BE00CBEA69 /* KeyboardHandlingViewController.swift */,
 				0A36C8BE2D5D9845004EDF1D /* ColorExt.swift */,
 				0A67378C2D78889E0013DD5E /* QRScannerView.swift */,
 			);
@@ -233,11 +239,13 @@
 				0AFCCA142D23D9D800B27340 /* CustomStackView.swift in Sources */,
 				0A67378D2D78889E0013DD5E /* QRScannerView.swift in Sources */,
 				0AFCCA152D23D9D800B27340 /* PaddedLabel.swift in Sources */,
+				0AD63AE32D7BE4BE00CBEA69 /* KeyboardHandlingViewController.swift in Sources */,
 				0AFCCA162D23D9D800B27340 /* CustomTextField.swift in Sources */,
 				0AF8DAF12D5067F2005CB68A /* LogInViewController.swift in Sources */,
 				106493062AE4213100EF26B4 /* LandingPageViewController.swift in Sources */,
 				A0033E542ADE0E9B007D6574 /* ViewController.swift in Sources */,
 				A0033E502ADE0E9B007D6574 /* AppDelegate.swift in Sources */,
+				0AD63ADF2D7BDF1900CBEA69 /* DynamicMultiplier.swift in Sources */,
 				A0033E642ADE9673007D6574 /* ProfileViewController.swift in Sources */,
 				A0033E522ADE0E9B007D6574 /* SceneDelegate.swift in Sources */,
 				0AFCCA1B2D23DA5800B27340 /* HomeViewController.swift in Sources */,
