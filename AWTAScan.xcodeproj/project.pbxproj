@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A15BF1D2D7E9FD800CF0E51 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A15BF1C2D7E9FD800CF0E51 /* InformationViewController.swift */; };
+		0A20CBBD2D9E489C00981DBE /* APIKeysManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A20CBBC2D9E489300981DBE /* APIKeysManager.swift */; };
+		0A20CBBF2D9E48D100981DBE /* APIKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A20CBBE2D9E48C600981DBE /* APIKeys.plist */; };
+		0A20CBC12D9E49E100981DBE /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A20CBC02D9E49DE00981DBE /* API.swift */; };
 		0A36C8BF2D5D984B004EDF1D /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A36C8BE2D5D9845004EDF1D /* ColorExt.swift */; };
 		0A67378D2D78889E0013DD5E /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A67378C2D78889E0013DD5E /* QRScannerView.swift */; };
+		0A71D8272D83C7910092BEAF /* ErrorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A71D8262D83C7850092BEAF /* ErrorLabel.swift */; };
+		0A9EAE022D9E3F6B00BDCCDD /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9EAE012D9E3F6800BDCCDD /* Struct.swift */; };
 		0AD63ADF2D7BDF1900CBEA69 /* DynamicMultiplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD63ADE2D7BDF0800CBEA69 /* DynamicMultiplier.swift */; };
 		0AD63AE32D7BE4BE00CBEA69 /* KeyboardHandlingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD63AE22D7BE4BE00CBEA69 /* KeyboardHandlingViewController.swift */; };
 		0AF8DAF12D5067F2005CB68A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8DAF02D5067F2005CB68A /* LogInViewController.swift */; };
@@ -31,8 +37,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A15BF1C2D7E9FD800CF0E51 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		0A20CBBC2D9E489300981DBE /* APIKeysManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeysManager.swift; sourceTree = "<group>"; };
+		0A20CBBE2D9E48C600981DBE /* APIKeys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = APIKeys.plist; sourceTree = "<group>"; };
+		0A20CBC02D9E49DE00981DBE /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		0A36C8BE2D5D9845004EDF1D /* ColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExt.swift; sourceTree = "<group>"; };
 		0A67378C2D78889E0013DD5E /* QRScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
+		0A71D8262D83C7850092BEAF /* ErrorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorLabel.swift; sourceTree = "<group>"; };
+		0A9EAE012D9E3F6800BDCCDD /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
 		0AD63ADE2D7BDF0800CBEA69 /* DynamicMultiplier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicMultiplier.swift; sourceTree = "<group>"; };
 		0AD63AE22D7BE4BE00CBEA69 /* KeyboardHandlingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHandlingViewController.swift; sourceTree = "<group>"; };
 		0AF8DAF02D5067F2005CB68A /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -67,9 +79,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A15BF1B2D7E9FBD00CF0E51 /* InfoView */ = {
+			isa = PBXGroup;
+			children = (
+				0A15BF1C2D7E9FD800CF0E51 /* InformationViewController.swift */,
+			);
+			path = InfoView;
+			sourceTree = "<group>";
+		};
 		0A36C8BC2D5D9824004EDF1D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0A20CBC02D9E49DE00981DBE /* API.swift */,
+				0A20CBBC2D9E489300981DBE /* APIKeysManager.swift */,
 				0AD63ADE2D7BDF0800CBEA69 /* DynamicMultiplier.swift */,
 				0AD63AE22D7BE4BE00CBEA69 /* KeyboardHandlingViewController.swift */,
 				0A36C8BE2D5D9845004EDF1D /* ColorExt.swift */,
@@ -89,15 +111,26 @@
 		0A6737872D787E830013DD5E /* OLD CODE */ = {
 			isa = PBXGroup;
 			children = (
+				0AFBFC6E2B22DF6C0030A075 /* ManualTypeViewController.swift */,
+				A0033E632ADE9673007D6574 /* ProfileViewController.swift */,
 				106493052AE4213100EF26B4 /* LandingPageViewController.swift */,
 				A0033E532ADE0E9B007D6574 /* ViewController.swift */,
 			);
 			path = "OLD CODE";
 			sourceTree = "<group>";
 		};
+		0A9EAE002D9E3F5F00BDCCDD /* Struct */ = {
+			isa = PBXGroup;
+			children = (
+				0A9EAE012D9E3F6800BDCCDD /* Struct.swift */,
+			);
+			path = Struct;
+			sourceTree = "<group>";
+		};
 		0AFCCA122D23D9D800B27340 /* CustomComponents */ = {
 			isa = PBXGroup;
 			children = (
+				0A71D8262D83C7850092BEAF /* ErrorLabel.swift */,
 				0AF8DAF22D506A25005CB68A /* CustomLabel.swift */,
 				0AFCCA0E2D23D9D800B27340 /* CustomTextField.swift */,
 				0AFCCA0F2D23D9D800B27340 /* CustomButton.swift */,
@@ -110,6 +143,7 @@
 		0AFCCA182D23DA1F00B27340 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				0A15BF1B2D7E9FBD00CF0E51 /* InfoView */,
 				0A36C8C02D5D98B2004EDF1D /* LogIn */,
 				0AFCCA192D23DA3800B27340 /* Home */,
 			);
@@ -143,13 +177,13 @@
 		A0033E4E2ADE0E9B007D6574 /* AWTAScan */ = {
 			isa = PBXGroup;
 			children = (
+				0A20CBBE2D9E48C600981DBE /* APIKeys.plist */,
+				0A9EAE002D9E3F5F00BDCCDD /* Struct */,
 				0AFCCA122D23D9D800B27340 /* CustomComponents */,
 				0A36C8BC2D5D9824004EDF1D /* Utils */,
 				0AFCCA182D23DA1F00B27340 /* Screen */,
 				A0033E4F2ADE0E9B007D6574 /* AppDelegate.swift */,
 				A0033E512ADE0E9B007D6574 /* SceneDelegate.swift */,
-				0AFBFC6E2B22DF6C0030A075 /* ManualTypeViewController.swift */,
-				A0033E632ADE9673007D6574 /* ProfileViewController.swift */,
 				0A6737872D787E830013DD5E /* OLD CODE */,
 				0AFBFC702B22E1620030A075 /* DataService.swift */,
 				A0033E552ADE0E9B007D6574 /* Main.storyboard */,
@@ -219,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0033E5C2ADE0E9C007D6574 /* LaunchScreen.storyboard in Resources */,
+				0A20CBBF2D9E48D100981DBE /* APIKeys.plist in Resources */,
 				A0033E592ADE0E9C007D6574 /* Assets.xcassets in Resources */,
 				A0033E572ADE0E9B007D6574 /* Main.storyboard in Resources */,
 			);
@@ -232,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AFBFC6F2B22DF6C0030A075 /* ManualTypeViewController.swift in Sources */,
+				0A15BF1D2D7E9FD800CF0E51 /* InformationViewController.swift in Sources */,
 				0A36C8BF2D5D984B004EDF1D /* ColorExt.swift in Sources */,
 				0AFBFC712B22E1620030A075 /* DataService.swift in Sources */,
 				0AF8DAF32D506A26005CB68A /* CustomLabel.swift in Sources */,
@@ -242,12 +278,16 @@
 				0AD63AE32D7BE4BE00CBEA69 /* KeyboardHandlingViewController.swift in Sources */,
 				0AFCCA162D23D9D800B27340 /* CustomTextField.swift in Sources */,
 				0AF8DAF12D5067F2005CB68A /* LogInViewController.swift in Sources */,
+				0A9EAE022D9E3F6B00BDCCDD /* Struct.swift in Sources */,
 				106493062AE4213100EF26B4 /* LandingPageViewController.swift in Sources */,
+				0A71D8272D83C7910092BEAF /* ErrorLabel.swift in Sources */,
+				0A20CBC12D9E49E100981DBE /* API.swift in Sources */,
 				A0033E542ADE0E9B007D6574 /* ViewController.swift in Sources */,
 				A0033E502ADE0E9B007D6574 /* AppDelegate.swift in Sources */,
 				0AD63ADF2D7BDF1900CBEA69 /* DynamicMultiplier.swift in Sources */,
 				A0033E642ADE9673007D6574 /* ProfileViewController.swift in Sources */,
 				A0033E522ADE0E9B007D6574 /* SceneDelegate.swift in Sources */,
+				0A20CBBD2D9E489C00981DBE /* APIKeysManager.swift in Sources */,
 				0AFCCA1B2D23DA5800B27340 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

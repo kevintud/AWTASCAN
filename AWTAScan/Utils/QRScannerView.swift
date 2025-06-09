@@ -110,14 +110,17 @@ class QRScannerView: UIView, AVCaptureMetadataOutputObjectsDelegate {
         captureSession?.stopRunning()
     }
     
+    
     // MARK: - Corner Brackets
     private func setupCornerBrackets() {
+        guard let previewLayer = previewLayer else { return }
+        
         let cornerSize: CGFloat = 30
         let lineWidth: CGFloat = 6
-        let inset: CGFloat = 8 // Distance from preview frame
+        let inset: CGFloat = 8
         let cornerColor = UIColor.black.cgColor
 
-        let previewFrame = previewLayer.frame // Get the preview layer's frame
+        let previewFrame = previewLayer.frame 
 
         let path = UIBezierPath()
 
@@ -156,6 +159,10 @@ class QRScannerView: UIView, AVCaptureMetadataOutputObjectsDelegate {
         previewLayer?.frame = self.bounds
         layer.sublayers?.removeAll(where: { $0 is CAShapeLayer })
         setupCornerBrackets()
+    }
+    
+    deinit {
+        captureSession?.stopRunning()
     }
 }
 

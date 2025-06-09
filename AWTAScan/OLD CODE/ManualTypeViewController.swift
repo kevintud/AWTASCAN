@@ -258,7 +258,9 @@ class ManualTypeViewController: UIViewController, UITextFieldDelegate {
     
     func makeApiCall(delegateID: String) {
         let baseURL = "https://lampawta.com/api/delegate/"
-        let apiKey = "bdf0bf18-54cf-4aca-86ec-a03b77c02264"
+        guard let apiKey = APIKeysManager.apiKey(for: "login_api_key") else {
+            return
+        }
         
         guard let url = URL(string: "\(baseURL)\(delegateID)?api_key=\(apiKey)") else {
             print("Invalid URL")

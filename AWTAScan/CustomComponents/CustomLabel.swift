@@ -22,6 +22,7 @@ class CustomLabel: UILabel {
         self.textAlignment = .center
         self.font = UIFont(name: "Avenir", size: fontSize) ?? UIFont.systemFont(ofSize: fontSize)
         self.translatesAutoresizingMaskIntoConstraints = false
+        self.clipsToBounds = true
     }
     
     
