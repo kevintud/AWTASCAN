@@ -20,7 +20,6 @@
 		0AF8DAF12D5067F2005CB68A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8DAF02D5067F2005CB68A /* LogInViewController.swift */; };
 		0AF8DAF32D506A26005CB68A /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8DAF22D506A25005CB68A /* CustomLabel.swift */; };
 		0AFBFC6F2B22DF6C0030A075 /* ManualTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFBFC6E2B22DF6C0030A075 /* ManualTypeViewController.swift */; };
-		0AFBFC712B22E1620030A075 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFBFC702B22E1620030A075 /* DataService.swift */; };
 		0AFCCA132D23D9D800B27340 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCCA0F2D23D9D800B27340 /* CustomButton.swift */; };
 		0AFCCA142D23D9D800B27340 /* CustomStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCCA102D23D9D800B27340 /* CustomStackView.swift */; };
 		0AFCCA152D23D9D800B27340 /* PaddedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFCCA112D23D9D800B27340 /* PaddedLabel.swift */; };
@@ -50,7 +49,6 @@
 		0AF8DAF02D5067F2005CB68A /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		0AF8DAF22D506A25005CB68A /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		0AFBFC6E2B22DF6C0030A075 /* ManualTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualTypeViewController.swift; sourceTree = "<group>"; };
-		0AFBFC702B22E1620030A075 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		0AFCCA0E2D23D9D800B27340 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		0AFCCA0F2D23D9D800B27340 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		0AFCCA102D23D9D800B27340 /* CustomStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStackView.swift; sourceTree = "<group>"; };
@@ -185,7 +183,6 @@
 				A0033E4F2ADE0E9B007D6574 /* AppDelegate.swift */,
 				A0033E512ADE0E9B007D6574 /* SceneDelegate.swift */,
 				0A6737872D787E830013DD5E /* OLD CODE */,
-				0AFBFC702B22E1620030A075 /* DataService.swift */,
 				A0033E552ADE0E9B007D6574 /* Main.storyboard */,
 				A0033E582ADE0E9C007D6574 /* Assets.xcassets */,
 				A0033E5A2ADE0E9C007D6574 /* LaunchScreen.storyboard */,
@@ -269,7 +266,6 @@
 				0AFBFC6F2B22DF6C0030A075 /* ManualTypeViewController.swift in Sources */,
 				0A15BF1D2D7E9FD800CF0E51 /* InformationViewController.swift in Sources */,
 				0A36C8BF2D5D984B004EDF1D /* ColorExt.swift in Sources */,
-				0AFBFC712B22E1620030A075 /* DataService.swift in Sources */,
 				0AF8DAF32D506A26005CB68A /* CustomLabel.swift in Sources */,
 				0AFCCA132D23D9D800B27340 /* CustomButton.swift in Sources */,
 				0AFCCA142D23D9D800B27340 /* CustomStackView.swift in Sources */,

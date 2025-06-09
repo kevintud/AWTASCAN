@@ -163,6 +163,8 @@ class QRScannerView: UIView, AVCaptureMetadataOutputObjectsDelegate {
     
     deinit {
         captureSession?.stopRunning()
+        previewLayer?.removeFromSuperlayer()
+        captureSession = nil
     }
 }
 
